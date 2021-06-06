@@ -361,7 +361,15 @@
 	result = /obj/item/ammo_casing/caseless/arrow/wood
 	time = 30
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/sheet/silk = 1,
+				/obj/item/stack/rods = 1) //1 metal sheet = 2 rods= 2 arrows
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/arrow_metal
+	name = "Iron Arrow"
+	result = /obj/item/ammo_casing/caseless/arrow/iron
+	time = 30
+	reqs = list(/obj/item/stack/sheet/mineral/iron = 2,
 				/obj/item/stack/rods = 1) //1 metal sheet = 2 rods= 2 arrows
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
@@ -370,9 +378,8 @@
 	name = "Bone Arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/bone
 	time = 30
-	reqs = list(/obj/item/stack/sheet/bone = 1,
-				/obj/item/stack/sheet/sinew = 1,
-				/obj/item/ammo_casing/caseless/arrow/ash = 1)
+	reqs = list(/obj/item/stack/sheet/bone = 2,
+				/obj/item/stack/sheet/sinew = 1,)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
@@ -389,9 +396,7 @@
 	name = "Bronze arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/bronze
 	time = 30
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/tile/bronze = 1,
-				/obj/item/stack/sheet/silk = 1)
+	reqs = list(/obj/item/stack/tile/bronze = 2)
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
@@ -778,6 +783,14 @@
 	time = 60
 	reqs = list(/obj/item/grown/log = 5)
 	result = /obj/structure/bonfire
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/skeleton_key
+	name = "Skeleton Key"
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 5)
+	result = /obj/item/skeleton_key
+	always_available = FALSE
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/headpike
